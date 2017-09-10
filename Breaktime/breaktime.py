@@ -9,5 +9,4 @@ while break_count < timer_count:
     # print ("on break " + break_count)
     time.sleep(10)
     webbrowser.open("https://youtu.be/dOlrYz9cJMI")
-    break_count = break_count +1
-    
+    break_count = break_count + 1
