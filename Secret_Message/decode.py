@@ -1,4 +1,5 @@
 import os
+import string
 from os import listdir
 from os.path import isfile, join
 
@@ -16,3 +17,8 @@ onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 # act on each file
 for fle in onlyfiles:
     print fle
+    for nums in range(9):
+        fle = string.replace(fle, str(nums),'',3)
+    print "-- " + fle
+
+## End of the File, If this is missing File has been truncated
