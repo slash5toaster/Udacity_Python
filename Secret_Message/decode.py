@@ -16,9 +16,18 @@ onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 # act on each file
 for fle in onlyfiles:
-    print fle
-    for nums in range(9):
-        fle = string.replace(fle, str(nums),'',3)
-    print "-- " + fle
+    print fle,
+
+    #save the decoded file name
+    decoded_fle = fle
+
+    #modifiy the decoded name
+    for nums in range(10):
+        # print str(nums)+ " ",
+        decoded_fle = string.replace(decoded_fle, str(nums),'',3)
+        # print fle
+    # double check
+    print "renamed to " + decoded_fle
+    os.rename(join(mypath,fle),join(mypath,decoded_fle))
 
 ## End of the File, If this is missing File has been truncated
