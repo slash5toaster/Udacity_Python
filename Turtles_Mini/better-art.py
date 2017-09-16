@@ -10,6 +10,15 @@ def draw_triangle(some_turtle):
         some_turtle.forward(100)
         some_turtle.left(120)
 
+def draw_diamond(some_turtle):
+    angle1 = 140
+    angle2 = 180 - angle1
+    for side in range(2):
+        some_turtle.forward(100)
+        some_turtle.right(angle1)
+        some_turtle.forward(100)
+        some_turtle.right(angle2)
+
 def draw_stuff():
     window = turtle.Screen()
     window.bgcolor("blue")
@@ -17,9 +26,14 @@ def draw_stuff():
     chuck = turtle.Turtle()
     chuck.shape("classic")
     chuck.color("green")
-    chuck.speed(10)
+    chuck.speed(20)
+    # draw the flower
+    chuck.right(90)
+    chuck.forward(200)
+    chuck.right(180)
+    chuck.forward(200)
     for i in range(36):
-        draw_triangle(chuck)
+        draw_diamond(chuck)
         chuck.left(10)
 
     # angie = turtle.Turtle()
