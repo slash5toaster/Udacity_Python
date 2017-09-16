@@ -10,8 +10,9 @@ def draw_triangle(some_turtle):
         some_turtle.forward(100)
         some_turtle.left(120)
 
-def draw_diamond(some_turtle):
-    angle1 = 140
+
+def draw_diamond(some_turtle,angle1):
+    # angle1 = 140
     angle2 = 180 - angle1
     for side in range(2):
         some_turtle.forward(100)
@@ -33,7 +34,7 @@ def draw_stuff():
     chuck.right(180)
     chuck.forward(200)
     for i in range(36):
-        draw_diamond(chuck)
+        draw_diamond(chuck,160)
         chuck.left(10)
 
     # angie = turtle.Turtle()
