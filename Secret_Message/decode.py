@@ -9,11 +9,13 @@ from os.path import isfile, join
 #    2.1 calculate updated filename
 #    2.2 rename file to updated filename
 
-mypath = "/Users/jonesc47/Google Drive/Python/PythonClass_Udacity/Secret_Message/prank"
+# mypath = "/Users/jonesc47/Google Drive/Python/PythonClass_Udacity/Secret_Message/prank"
+# assumes the 
+mypath = os.getcwd() + "/prank"
 
 #get all the files in the directory
-onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-
+onlyfiles = [f for f in os.listdir(mypath) if isfile(join(mypath, f))]
+print
 # act on each file
 for fle in onlyfiles:
     print fle,
@@ -25,6 +27,7 @@ for fle in onlyfiles:
     for nums in range(10):
         # print str(nums)+ " ",
         decoded_fle = string.replace(decoded_fle, str(nums),'',3)
+
         # print fle
     # double check
     print "renamed to " + decoded_fle
