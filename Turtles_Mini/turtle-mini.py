@@ -34,7 +34,7 @@ def draw_stuff():
     chuck.right(180)
     chuck.forward(200)
     for i in range(36):
-        draw_diamond(chuck,160)
+        draw_diamond(chuck,120)
         chuck.left(10)
 
     # angie = turtle.Turtle()
